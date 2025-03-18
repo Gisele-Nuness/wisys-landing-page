@@ -1,0 +1,251 @@
+@media (max-width: 1924px) {
+    .cabecalho {
+        font-size: 25px;
+    }
+
+    .logo .img-logo {
+        width: 110px;
+        height: 110px; 
+    }
+
+    section.quem-somos {
+        margin-right: 115px;
+    }
+
+    .quem-somos h2 {
+        font-size: 35px;
+    }
+
+    .quem-somos p {
+        font-size: 25px;
+        max-width: 700px;
+    }
+
+    .quem-somos .slogan{
+        font-size: 22px;
+    }
+
+    
+}
+
+@media (max-width: 1010px) {
+
+    .cabecalho {
+        padding: 10px;
+    }
+
+    .logo .img-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .quem-somos h2 {
+        font-size: 30px;
+    }
+
+    .quem-somos p {
+        font-size: 20px;
+    }
+
+    .informacoes {
+        width: 50%;
+        height: auto;
+        margin-left: 0;
+        padding: 40px;
+    }
+    
+    .titulo {
+        font-size: 30px;
+    }
+    
+    .descricao {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 960px) {
+    section.quem-somos {
+        align-self: flex-start;
+        width: 450px;
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+
+    .projetos .container-projetos {
+        max-width: 700px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .logo .img-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    section.quem-somos {
+        width: 350px; 
+    }
+
+    .quem-somos h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .quem-somos p {
+        font-size: 18px;
+        max-width: 800px;
+        line-height: 1.6;
+    }
+
+    .quem-somos .slogan{
+        font-size: 16px;
+    }
+
+    section.projetos {
+        margin: 0 20px;
+    }
+    
+ 
+    section.colaboradores {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-height: 600px;      
+    }
+    
+    .lista-colaboradores {
+        display: flex;
+        max-width: 600px;
+        flex-wrap: wrap;
+        gap: 40px;
+        
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+
+    .lista-empresas {
+        gap: 40px;
+    }
+
+    .empresa1 {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .empresa2 {
+        width: 200px;
+        height: 300px;
+    }
+
+    .logo-parceiro {
+        width: 140px;
+    }
+    
+    .info h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .info p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-details {
+        margin-bottom: 10px;
+    }
+    
+    .contact-item {
+        gap: 8px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .social {
+        margin-top: 10px;
+    }
+    
+    .social-link {
+        width: 20px;
+    }
+    
+    .contact-form {
+        padding: 10px;
+    }
+    
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    button.btn {
+        height: 30px;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    section.quem-somos {
+        margin-top: 220px;
+    }
+
+    .quem-somos h2 {
+        font-size: 20px;
+    }
+
+    .quem-somos p {
+        font-size: 16px;
+    }
+
+
+    button {
+        font-size: 20px;
+    }
+    
+    
+    .informacoes {
+        padding: 20px;
+    }
+    
+    .titulo {
+        font-size: 24px;
+    }
+    
+    .descricao {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    button.btn {
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+    }
+    
+}
+
+
