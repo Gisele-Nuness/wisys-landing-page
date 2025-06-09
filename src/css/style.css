@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-html{
+/*html{
     scroll-behavior: smooth;
 }
-
+*/
 body {
     background: linear-gradient(to bottom, #0A192F, #4F6272, #0a0f20);
 
@@ -27,6 +27,14 @@ header {
     
 }
 
+#home,
+#projetos,
+#colaboradores,
+#parceiros,
+#faleconosco {
+  scroll-margin-top: 300px;
+}
+
 .cabecalho {
     position: fixed;
     top: 0;
@@ -42,7 +50,7 @@ header {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1;
 }
 
 .logo {
@@ -102,6 +110,7 @@ section.home {
     align-self: center;
     transition: 0.3s;
     margin-top: 200px;
+    margin-bottom: 20px;
 }
 
 .btn-juntar:hover {
