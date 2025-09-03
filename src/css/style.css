@@ -27,12 +27,17 @@ header {
     
 }
 
+section {
+    scroll-margin-top: 110px;
+}
+
+
 #home,
 #projetos,
 #colaboradores,
 #parceiros,
 #faleconosco {
-  scroll-margin-top: 300px;
+  scroll-margin-top: 110px;
 }
 
 
@@ -45,15 +50,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 10px;
     font-weight: 400;
     font-size: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
+
 
 .logo {
     display: flex;
@@ -72,7 +78,7 @@ main {
 }
 /* Links da navbar */
 #navbar a {
-    color: #344556; /* Cor inicial */
+    color: white; /* Cor inicial */
     transition: color 0.7s ease, background-color 0.7s ease; /* Transição suave */
     text-decoration: none;
     margin: 0 15px;
@@ -90,11 +96,11 @@ main {
 }
 
 #navbar.scrolled a {
-    color: #93a2ba; 
+    color: white; 
 }
 
 #navbar.scrolled a:hover {
-    color: #ededed; 
+    color: white; 
 }
 
 /* QUEM SOMOS */
@@ -108,6 +114,7 @@ section.home {
     height: 50%;
     color: #fff;
     margin-top: 100px;
+    scroll-margin-top: 110px;
     
 }
 
@@ -154,6 +161,7 @@ section.home {
     display: flex;
     flex-direction: column;
     padding: 70px 0;
+    scroll-margin-top: 110px;
 }
 
 .projetos .titulo {
@@ -252,6 +260,7 @@ section.home {
 .projetos, .colaboradores, .parceiros {
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
+
 }
 
 @keyframes autoShowAnimation {
@@ -269,6 +278,7 @@ section.home {
 .colaboradores {
     padding: 4rem 2rem;
     text-align: center;
+    scroll-margin-top: 110px;
   }
   
   .colaboradores h2 {
@@ -380,6 +390,7 @@ section.parceiros {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    scroll-margin-top: 110px;
  }
 
  .titulo-parceiros {
@@ -459,6 +470,8 @@ section.parceiros {
     background-color: #ffffff;
     margin-top: 100px;
     color: #666;
+     scroll-margin-top: 110px;
+    
  }
 
  .container {

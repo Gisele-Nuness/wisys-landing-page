@@ -40,3 +40,38 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("scrolled");
   }
 });
+
+// Scroll links internos
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const navbar = document.getElementById("navbar");
+    const navbarHeight = navbar.offsetHeight; 
+    const target = document.querySelector(this.getAttribute('href'));
+
+    let extraOffset = -200;
+    
+    if (target.id === "faleconosco") {
+      extraOffset = -520; 
+    }
+
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+
+const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+
+
+const maxScroll = document.body.scrollHeight - window.innerHeight;
+const finalPosition = Math.min(targetPosition, maxScroll);
+
+window.scrollTo({
+  top: finalPosition,
+  behavior: 'smooth'
+});
