@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./src/images/logo-azul.PNG" type="image/x-icon">
+
+    
 </head>
 
 <body>
@@ -355,10 +357,10 @@
                     </iframe>
                 </div>
                     
-                <form class="contact-form">
+                <form id="form-contato" class="contact-form">
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="nome" required>
                     </div>
                     <div class="form-group">
                          <label for="email">E-mail</label>
@@ -366,7 +368,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <textarea id="message" name="mensagem" rows="4" required></textarea>
                     </div>
 
                     <button type="submit" class="btn">Enviar Mensagem</button>
@@ -374,6 +376,26 @@
                 </form>
             </div>
         </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("ZtZjMfu-lIWeWtNyB"); //essa é a parte para colocar a public key?
+  })();
+
+  document.getElementById("form-contato").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_uvbu9cm", "template_d8k2n5l", this)
+      .then(function() {
+        alert("Mensagem enviada com sucesso! ");
+        document.getElementById("form-contato").reset();
+      }, function(error) {
+        alert("Ocorreu um erro: " + JSON.stringify(error));
+      });
+  });
+</script>
+
 
     </main>
 
@@ -395,6 +417,9 @@
     </footer>
 
     <script src="./src/js/index.js"></script>
+
+
+    
 </body>
 
 </html>
