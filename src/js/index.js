@@ -65,13 +65,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+
+const lista = document.querySelector(".lista-colaboradores");
+const container = lista.parentElement;
+const btnEsquerda = document.querySelector(".seta.esquerda");
+const btnDireita = document.querySelector(".seta.direita");
+
+let deslocamento = 0;
+const larguraCard = lista.children[0].offsetWidth 
+                  + parseInt(getComputedStyle(lista).gap || 0);
+
+btnDireita.addEventListener("click", () => {
+  const maxDeslocamento = -(lista.scrollWidth - container.clientWidth);
 
 
-const maxScroll = document.body.scrollHeight - window.innerHeight;
-const finalPosition = Math.min(targetPosition, maxScroll);
+  if (deslocamento - larguraCard > maxDeslocamento) {
+    deslocamento -= larguraCard;
+  } else {
 
-window.scrollTo({
-  top: finalPosition,
-  behavior: 'smooth'
+    deslocamento = maxDeslocamento;
+  }
+
+  lista.style.transform = `translateX(${deslocamento}px)`;
+});
+
+btnEsquerda.addEventListener("click", () => {
+  if (deslocamento + larguraCard < 0) {
+    deslocamento += larguraCard;
+  } else {
+    deslocamento = 0; 
+  }
+
+  lista.style.transform = `translateX(${deslocamento}px)`;
 });

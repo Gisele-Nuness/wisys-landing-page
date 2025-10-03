@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-/*html{
-    scroll-behavior: smooth;
-}
-*/
+
 body {
     background: linear-gradient(to bottom, #0A192F, #4F6272, #0a0f20);
 
@@ -68,15 +65,15 @@ section {
 
 
 .logo .img-logo {
-    width: 150px;
-    height: 150px;   
+    max-width: 150px;
+    height: auto;   
 }
 
 
 main {
     flex: 1;
 }
-/* Links da navbar */
+
 #navbar a {
     color: white; /* Cor inicial */
     transition: color 0.7s ease, background-color 0.7s ease; /* Transição suave */
@@ -273,7 +270,6 @@ section.home {
     }
 }
 
-/* COLABORADORES */
 
 .colaboradores {
     padding: 4rem 2rem;
@@ -288,47 +284,100 @@ section.home {
     color: #fff;
   }
   
-  .lista-colaboradores {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 35px;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  
-  .colaborador .perfil {
-    position: relative;
-    padding-top: 5px;
-    background-color: #ffffff;
-    border-radius: 25%;
+
+.perfil {
+    width: 220px; /* largura fixa */
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .colaborador .perfil:hover {
-    transform: translateY(-5px);
-  }
-  
-  .avatar {
-    width: 100%;
-    height: 200px;
+    position: relative;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+.perfil:hover {
+    transform: scale(1.05);
+}
+
+.avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 15%;
     object-fit: cover;
-    display: block;
-  }
+    margin-bottom: 10px;
+    border: 3px solid #0055aa;
+}
+
+.carrosel-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.carrosel-container .seta{
+    position: absolute;
+    top: 50%; /* centraliza verticalmente */
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+
+
+.carrosel-container .seta:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.carrosel-container .esquerda {
+    left: 10px;
+}
+
+.carrosel-container .direita {
+    right: 10px; 
+}
+
+
+.carrosel{
+    overflow: hidden;
+    width: 100%;
+}
+.lista-colaboradores {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s;
+  padding: 40px 0 ;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+
+}
+
+
+ .colaborador {
+  min-width: 220px;
+  max-width: 250px;
+  flex: 0 0 auto; 
+  background: #1a1a1a;
+  text-align: center;
+  color: white; 
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+    width: 220;
   
-  .perfil p {
-    margin: 0;
-    padding: 20px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background-color: #ededed;
-    color: #334559;
-  }
-  
+}
+
   .info-hover {
     position: absolute;
     top: 0;
@@ -347,6 +396,7 @@ section.home {
     text-align: center;
   }
   
+
   .perfil:hover .info-hover {
     opacity: 1;
   }
@@ -381,7 +431,6 @@ section.home {
   }
   
 
-/* PARCEIROS */
 
 section.parceiros {
     display: flex;
@@ -459,7 +508,7 @@ section.parceiros {
     width: 250px;
  }
 
- /* FALE CONOSCO */
+ 
 
  section.contato {
     display: flex;
