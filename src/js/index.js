@@ -98,3 +98,13 @@ btnEsquerda.addEventListener("click", () => {
 
   lista.style.transform = `translateX(${deslocamento}px)`;
 });
+
+
+   document.getElementById("btnProjetos").addEventListener("click", function () {
+    const projetos = document.querySelectorAll(".projetos .projeto");
+    projetos.forEach(projeto => {
+      projeto.classList.add("ativo"); // Mostra os projetos
+    });
+
+    this.style.display = "none"; // Esconde o botão
+  });
