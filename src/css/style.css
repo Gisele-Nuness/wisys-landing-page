@@ -47,7 +47,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 4px;
     font-weight: 400;
     font-size: 50px;
     background: rgba(10, 25, 47, 0.8);
@@ -171,19 +171,13 @@ section.home {
 
 .projetos .container-projetos {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
-    max-width: 1148px;
-    align-self: center;
-    margin-bottom: 20px;
     justify-content: center;
 }
 
 .projetos .projeto {
-    max-width: 260px;
-    max-height: 500px;
-    position: relative;
-    display: none;
+   width: 300px;
+   margin: 10px;
 }
 
 .projetos .projeto.ativo {
@@ -275,7 +269,7 @@ section.home {
     padding: 4rem 2rem;
     text-align: center;
     scroll-margin-top: 110px;
-    color: #0055aa;
+    
   }
   .h3{
     color: #0055aa;
@@ -290,7 +284,7 @@ section.home {
   
 
 .perfil {
-    width: 220px; /* largura fixa */
+    width: 220px; 
     background-color:white;
     border-radius: 25px;
     display: flex;
@@ -311,7 +305,7 @@ section.home {
     border-radius: 15%;
     object-fit: cover;
     margin-bottom: 10px;
-    border: 3px solid #0055aa;
+    
 }
 
 .carrosel-container {
@@ -323,7 +317,7 @@ section.home {
 }
 .carrosel-container .seta{
     position: absolute;
-    top: 60%; /* centraliza verticalmente */
+    top: 60%; 
     transform: translateY(-50%);
     background-color: rgba(0,0,0,0.5);
     border: none;
@@ -407,8 +401,7 @@ section.home {
   
   .info-hover h3 {
     margin: 10px 0;
-    font-size: 20px;
-    color: #adb5be;
+    
   }
   
   .info-hover p {
@@ -428,6 +421,7 @@ section.home {
     height: 24px;
     transition: transform 0.3s ease;
     filter: invert(1);
+
   }
   
   .icons a:hover img {

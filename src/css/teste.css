@@ -1,0 +1,204 @@
+/* ===========================
+   📱 RESPONSIVIDADE GERAL
+   =========================== */
+
+/* Telas até 1200px — tablets e notebooks pequenos */
+@media (max-width: 1200px) {
+  .cabecalho {
+    font-size: 36px;
+    padding: 10px 20px;
+  }
+
+  .logo .img-logo {
+    max-width: 120px;
+  }
+
+  .projetos .container-projetos {
+    gap: 15px;
+  }
+
+  .projetos .projeto {
+    max-width: 240px;
+  }
+
+  .colaboradores {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Telas até 992px — tablets */
+@media (max-width: 992px) {
+  /* Header */
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #navbar a {
+    font-size: 20px;
+    margin: 8px;
+  }
+
+  /* Home */
+  section.home {
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .slogan {
+    font-size: 32px;
+  }
+
+  .btn-juntar {
+    margin-top: 80px;
+  }
+
+  /* Projetos */
+  .projetos .container-projetos {
+    justify-content: center;
+  }
+
+  /* Colaboradores */
+  .lista-colaboradores {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .perfil {
+    width: 200px;
+  }
+
+  /* Parceiros */
+  .lista-empresas {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Contato */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mapa-container,
+  .contact-form {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Telas até 768px — celulares grandes */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  /* Navbar */
+  .cabecalho {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  #navbar a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* Home */
+  .home .slogan {
+    font-size: 26px;
+  }
+
+  .btn-juntar {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  /* Projetos */
+  .projetos .projeto {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .projetos .titulo {
+    font-size: 28px;
+  }
+
+  /* Colaboradores */
+  .colaboradores h2 {
+    font-size: 32px;
+  }
+
+  .lista-colaboradores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Parceiros */
+  .titulo-parceiros {
+    font-size: 32px;
+  }
+
+  .empresa1,
+  .empresa2 {
+    width: 250px;
+    height: 320px;
+  }
+
+  /* Contato */
+  .contact-form {
+    width: 85%;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+
+  button.btn {
+    width: 100%;
+  }
+
+  /* Rodapé */
+  .footer-content {
+    text-align: center;
+  }
+}
+
+/* Telas até 480px — celulares pequenos */
+@media (max-width: 480px) {
+  .cabecalho {
+    font-size: 24px;
+  }
+
+  .home .slogan {
+    font-size: 22px;
+  }
+
+  .btn-juntar {
+    font-size: 18px;
+  }
+
+  .projetos .titulo {
+    font-size: 24px;
+  }
+
+  .colaboradores h2 {
+    font-size: 28px;
+  }
+
+  footer {
+    font-size: 14px;
+    height: auto;
+  }
+}
