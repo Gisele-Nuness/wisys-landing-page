@@ -8,9 +8,7 @@
 
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/menu.css">
   <link rel="stylesheet" href="./src/css/responsive.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
@@ -22,6 +20,7 @@
 
 <body>
   <header id="navbar">
+    <section class="cabecalho" id="navbar-fixo"></section>
     <section class="cabecalho">
       <a href="#" class="logo">
         <img src="./src/images/wisys-logo.png" alt="logo wisys" class="img-logo">
@@ -130,219 +129,169 @@
 
 
 
+<section class="colaboradores" id="colaboradores">
+  <h2>Nosso Time</h2>
+  <div class="carrosel-container">
+    <button class="seta esquerda">❮</button>
+    <div class="carrosel">
+      <ul class="lista-colaboradores">
 
-    <section class="colaboradores" id="colaboradores">
-      <h2>Nosso Time</h2>
-      <div class="carrosel-container">
-        <button class="seta esquerda">❮</button>
-        <div class="carrosel">
-          <ul class="lista-colaboradores">
-
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/barbara.png" alt="Bárbara" class="avatar" />
-                <p>Bárbara Miranda</p>
-                <div class="info-hover">
-                  <h3>Bárbara Miranda</h3>
-                  <p>Analista</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/barbara.png" alt="Bárbara" class="avatar" />
+            <p>Bárbara Miranda</p>
+            <div class="info-hover">
+              <h3>Bárbara Miranda</h3>
+              <p>Analista</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/esther.png" alt="Esther" class="avatar" />
-                <p>Esther Nascimento</p>
-                <div class="info-hover">
-                  <h3>Esther Nascimento</h3>
-                  <p>Full stack</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/esther.png" alt="Esther" class="avatar" />
+            <p>Esther Nascimento</p>
+            <div class="info-hover">
+              <h3>Esther Nascimento</h3>
+              <p>Full stack</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/arruda.jpg" alt="Gabriel Arruda" class="avatar" />
-                <p>Gabriel de Arruda</p>
-                <div class="info-hover">
-                  <h3>Gabriel de Arruda</h3>
-                  <p>Full stack</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/arruda.jpg" alt="Gabriel Arruda" class="avatar" />
+            <p>Gabriel de Arruda</p>
+            <div class="info-hover">
+              <h3>Gabriel de Arruda</h3>
+              <p>Full stack</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/sampaio.png" alt="Gabriel Sampaio" class="avatar" />
-                <p>Gabriel Sampaio</p>
-                <div class="info-hover">
-                  <h3>Gabriel Sampaio</h3>
-                  <p>Back-end</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
-                
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/sampaio.png" alt="Gabriel Sampaio" class="avatar" />
+            <p>Gabriel Sampaio</p>
+            <div class="info-hover">
+              <h3>Gabriel Sampaio</h3>
+              <p>Back-end</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/gisele.png" alt="Gisele" class="avatar" />
-                <p>Gisele Nunes</p>
-                <div class="info-hover">
-                  <h3>Gisele Nunes</h3>
-                  <p>Gerente de projetos</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/gisele.png" alt="Gisele" class="avatar" />
+            <p>Gisele Nunes</p>
+            <div class="info-hover">
+              <h3>Gisele Nunes</h3>
+              <p>Gerente de projetos</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/esthernascimento" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/hyago.jpg" alt="Hyago" class="avatar" />
-                <p>Hyago Inácio</p>
-                <div class="info-hover">
-                  <h3>Hyago Inácio</h3>
-                  <p>DBA</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-
-              </li>
-          
-              <li class="colaborador">
-                <div class="perfil">
-                  <img src="./src/images/gisele.png" alt="Gisele" class="avatar" />
-                  <p>Gisele Nunes</p>
-                  <div class="info-hover">
-                    <h3>Gisele Nunes</h3>
-                    <p>Gerente de projetos</p>
-                    <div class="icons">
-                        <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
-                        <a href="https://github.com/esthernascimento" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-          
-              <li class="colaborador">
-                <div class="perfil">
-                  <img src="./src/images/hyago.jpg" alt="Hyago" class="avatar" />
-                  <p>Hyago Inácio</p>
-                  <div class="info-hover">
-                    <h3>Hyago Inácio</h3>
-                    <p>DBA</p>
-                    <div class="icons">
-                        <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
-                        <a href="https://github.com/HyagoIFSilva" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
-                    </div>
-                    
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/hyago.jpg" alt="Hyago" class="avatar" />
+            <p>Hyago Inácio</p>
+            <div class="info-hover">
+              <h3>Hyago Inácio</h3>
+              <p>DBA</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/HyagoIFSilva" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/kaua.png" alt="Kauan" class="avatar" />
-                <p>Kauã de Souza</p>
-                <div class="info-hover">
-                  <h3>Kauã de Souza</h3>
-                  <p>Front-end</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/kaua.png" alt="Kauã" class="avatar" />
+            <p>Kauã de Souza</p>
+            <div class="info-hover">
+              <h3>Kauã de Souza</h3>
+              <p>Front-end</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/larissa.png" alt="Larissa" class="avatar" />
-                <p>Larissa Vitória</p>
-                <div class="info-hover">
-                  <h3>Larissa Vitória</h3>
-                  <p>Design</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/larissa.png" alt="Larissa" class="avatar" />
+            <p>Larissa Vitória</p>
+            <div class="info-hover">
+              <h3>Larissa Vitória</h3>
+              <p>Design</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/lukas.png" alt="Lukas" class="avatar" />
-                <p>Lucas Victor</p>
-                <div class="info-hover">
-                  <h3>Lucas Victor</h3>
-                  <p>Tester</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/lukas.png" alt="Lukas" class="avatar" />
+            <p>Lucas Victor</p>
+            <div class="info-hover">
+              <h3>Lucas Victor</h3>
+              <p>Tester</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
               </div>
-            </li>
+            </div>
+          </div>
+        </li>
 
-            <li class="colaborador">
-              <div class="perfil">
-                <img src="./src/images/marina.png" alt="Marina" class="avatar" />
-                <p>Marina</p>
-                <div class="info-hover">
-                  <h3>Marina Lima</h3>
-                  <p>Design</p>
-                  <div class="icons">
-                    <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png"
-                        alt="Instagram"></a>
-                    <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png"
-                        alt="GitHub"></a>
-                  </div>
-                </div>
-            </li>
-          </ul>
-        </div>
+        <li class="colaborador">
+          <div class="perfil">
+            <img src="./src/images/marina.png" alt="Marina" class="avatar" />
+            <p>Marina Lima</p>
+            <div class="info-hover">
+              <h3>Marina Lima</h3>
+              <p>Design</p>
+              <div class="icons">
+                <a href="https://instagram.com/seuusuario" target="_blank"><img src="./src/images/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/seuusuario" target="_blank"><img src="./src/images/github.png" alt="GitHub"></a>
+              </div>
+            </div>
+          </div>
+        </li>
 
-        <button class="seta direita">❯</button>
-      </div>
-    </section>
+      </ul>
+    </div>
+    <button class="seta direita">❯</button>
+  </div>
+</section>
+
 
     <section class="parceiros" id="parceiros">
       <h2 class="titulo-parceiros">Parceiros</h2>
