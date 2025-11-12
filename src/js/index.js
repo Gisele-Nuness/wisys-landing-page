@@ -41,22 +41,33 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
 // Scroll links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
   anchor.addEventListener('click', function(e) {
-    e.preventDefault();
+    e.preventDefault(); 
 
-    const navbar = document.getElementById("navbar");
-    const navbarHeight = navbar.offsetHeight; 
-    const target = document.querySelector(this.getAttribute('href'));
-
-    let extraOffset = -200;
     
-    if (target.id === "faleconosco") {
-      extraOffset = -520; 
-    }
+    const navbar = document.getElementById("navbar-fixo");
 
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+   
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+    
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) {
+      console.warn("Seção não encontrada:",this.getAttribute('href'));
+        return;
+      }
+    
+    const sectionTop = target.getBoundingClientRect().top + window.scrollY;
+
+    const extraSpacing = 20;
+
+   
+    const targetPosition = sectionTop - navbarHeight + extraSpacing;
+
 
     window.scrollTo({
       top: targetPosition,
@@ -64,6 +75,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
 
 
 const lista = document.querySelector(".lista-colaboradores");
