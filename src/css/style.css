@@ -918,6 +918,7 @@ button.btn:active {
 }
 
 /* ===== MODAL ===== */
+
 .modal {
     display: none;
     position: fixed;
@@ -928,6 +929,10 @@ button.btn:active {
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px) saturate(180%);
     z-index: 2000;
+}
+
+.modal.show {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -936,16 +941,15 @@ button.btn:active {
     background: linear-gradient(145deg, #0f1419, #1a1f2e);
     backdrop-filter: blur(25px) saturate(180%);
     border: 2px solid rgba(13, 71, 161, 0.5);
-    border-radius: 10px;
-    padding: 30px 40px;
-    max-width: 400px;
+    border-radius: 24px;
+    padding: 50px;
+    max-width: 550px;
+    width: 90%;
     text-align: center;
     color: #fff;
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
     animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    width:80%;
-}   
-
+}
 @keyframes modalSlideIn {
     from {
         opacity: 0;
