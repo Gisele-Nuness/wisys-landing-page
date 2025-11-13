@@ -110,7 +110,7 @@ $template = "
             $mail->send();
         echo 'Mensagem enviada com sucesso!';
     } catch (Exception $e) {
-        echo "Erro ao enviar: {$mail->ErrorInfo}";
+        echo "erro: " . $mail->ErrorInfo;
 
         
     }

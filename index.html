@@ -395,18 +395,19 @@
       })
         .then(response => response.text())
         .then(data => {
+        console.log('Retorno do PHP:', data); 
 
           if (data.toLowerCase().includes('sucesso')) {
             modalMsg.textContent = "Email enviado com sucesso!";
           } else {
             modalMsg.textContent = "Erro ao enviar o email. Tente novamente.";
           }
-          modal.style.display = 'block';
+          modal.style.display = 'flex';
           form.reset();
         })
         .catch(error => {
           modalMsg.textContent = "Erro ao enviar o email. Tente novamente.";
-          modal.style.display = 'block';
+          modal.style.display = 'flex';
           console.error(error);
         });
     });
