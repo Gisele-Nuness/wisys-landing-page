@@ -18,14 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'admwisys@gmail.com'; 
-        $mail->Password   = 'zmhv xymv ttef vwnv'; 
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
+        $mail->Username   = 'oprontuariomais@gmail.com'; 
+        $mail->Password   = 'jdqp rclq lfbm jgym'; 
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port       = 465;
 
         
         $mail->setFrom($email, $nome); 
-        $mail->addAddress('admwisys@gmail.com'); 
+        $mail->addAddress('oprontuariomais@gmail.com'); 
         $mail->addEmbeddedImage('src/images/wisys-logo.png', 'logo', 'wisys-logo.png');
         
 $template = "
@@ -110,7 +110,7 @@ $template = "
             $mail->send();
         echo 'Mensagem enviada com sucesso!';
     } catch (Exception $e) {
-        echo "Erro ao enviar: {$mail->ErrorInfo}";
+        echo "erro: " . $mail->ErrorInfo;
 
         
     }
