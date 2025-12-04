@@ -371,57 +371,183 @@
   <script src="./src/js/index.js"></script>
 
 
-  <div id="modalEmail" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p id="modalMensagem"></p>
+<div id="modalEmail" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-container">
+
+    <div class="modal-glow"></div>
+    <div class="modal-particle particle-1"></div>
+    <div class="modal-particle particle-2"></div>
+    <div class="modal-particle particle-3"></div>
+    
+    <div class="modal-header">
+      <div class="modal-icon success">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <h2 class="modal-title">Mensagem Enviada!</h2>
+      <button class="modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="modal-body">
+      <p id="modalMensagem" class="modal-message">
+        Sua mensagem foi enviada com sucesso para a equipe Wisys.
+      </p>
+      <p class="modal-submessage">
+        Entraremos em contato em breve através do e-mail fornecido.
+      </p>
+      
+      <div class="modal-timer">
+        <div class="timer-circle">
+          <svg class="timer-svg" viewBox="0 0 36 36">
+            <path class="timer-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path class="timer-circle-progress" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          </svg>
+        </div>
+        <span class="timer-text">Fechando em <span class="timer-count">5</span>s</span>
+      </div>
+      
+      <div class="modal-actions">
+        <button class="modal-btn btn-primary" id="modalOk">
+          <i class="fas fa-check"></i>
+          <span>Entendi</span>
+        </button>
+        <button class="modal-btn btn-secondary" id="modalNewMessage">
+          <i class="fas fa-paper-plane"></i>
+          <span>Nova Mensagem</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="modal-footer">
+      <p class="modal-note">
+        <i class="fas fa-info-circle"></i>
+        Tempo de resposta estimado: 24h úteis
+      </p>
     </div>
   </div>
+</div>
 
-  <script>
-    const form = document.getElementById('form-contato');
-    const modal = document.getElementById('modalEmail');
-    const modalMsg = document.getElementById('modalMensagem');
-    const spanClose = document.querySelector('#modalEmail .close');
+<script>
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+const modal = document.getElementById('modalEmail');
+const modalMessage = document.getElementById('modalMensagem');
+const modalClose = document.querySelector('.modal-close');
+const modalOk = document.getElementById('modalOk');
+const modalNewMessage = document.getElementById('modalNewMessage');
+const timerCount = document.querySelector('.timer-count');
+const timerProgress = document.querySelector('.timer-circle-progress');
 
-      const formData = new FormData(form);
+let timerValue = 5;
+let timerInterval;
 
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      })
-        .then(response => response.text())
-        .then(data => {
+function showModal(message = "", type = "success") {
+  // Define a mensagem
+  if (message) {
+    modalMessage.textContent = message;
+  }
+  
+  const modalIcon = document.querySelector('.modal-icon');
+  const modalTitle = document.querySelector('.modal-title');
+  
+  if (type === "error") {
+    modalIcon.className = "modal-icon error";
+    modalTitle.textContent = "Ops! Algo deu errado";
+    modalIcon.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+      </svg>
+    `;
+  } else if (type === "success") {
+    modalIcon.className = "modal-icon success";
+    modalTitle.textContent = "Mensagem Enviada!";
+    modalIcon.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/>
+      </svg>
+    `;
+  }
+  
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  timerValue = 5;
+  timerCount.textContent = timerValue;
+  timerProgress.style.strokeDashoffset = 100;
+  startTimer();
+}
 
-          if (data.toLowerCase().includes('sucesso')) {
-            modalMsg.textContent = "Email enviado com sucesso!";
-          } else {
-            modalMsg.textContent = "Erro ao enviar o email. Tente novamente.";
-          }
-          modal.style.display = 'flex';
-          form.reset();
-        })
-        .catch(error => {
-          modalMsg.textContent = "Erro ao enviar o email. Tente novamente.";
-          modal.style.display = 'flex';
-          console.error(error);
-        });
-    });
+function hideModal() {
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+  clearInterval(timerInterval);
+}
 
-
-    spanClose.onclick = function () {
-      modal.style.display = "none";
+function startTimer() {
+  clearInterval(timerInterval);
+  
+  timerInterval = setInterval(() => {
+    timerValue--;
+    timerCount.textContent = timerValue;
+    
+    const progress = (5 - timerValue) / 5 * 100;
+    timerProgress.style.strokeDashoffset = 100 - progress;
+    
+    if (timerValue <= 0) {
+      clearInterval(timerInterval);
+      hideModal();
     }
+  }, 1000);
+}
 
+modalClose.addEventListener('click', hideModal);
+modalOk.addEventListener('click', hideModal);
+modalNewMessage.addEventListener('click', () => {
+  hideModal();
 
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
+  document.getElementById('faleconosco').scrollIntoView({ behavior: 'smooth' });
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target.classList.contains('modal') || e.target.classList.contains('modal-backdrop')) {
+    hideModal();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('active')) {
+    hideModal();
+  }
+});
+
+const form = document.getElementById('form-contato');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(form);
+  
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    if (data.toLowerCase().includes('sucesso')) {
+      showModal("Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.", "success");
+    } else {
+      showModal("Ops! Houve um erro ao enviar sua mensagem. Tente novamente.", "error");
     }
+    form.reset();
+  })
+  .catch(error => {
+    showModal("Erro de conexão. Verifique sua internet e tente novamente.", "error");
+    console.error(error);
+  });
+});
   </script>
 
   </div>
